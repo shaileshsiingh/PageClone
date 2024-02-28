@@ -2,37 +2,174 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: bisque;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.trophy {
+  flex: 0 0 30%;
+  background: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.trophy img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.details {
+  flex: 0 0 70%; /* Adjust to 70% for the second image */
+  background: bisque;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+}
+
+.details img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}
+
+.details-text {
+  font-size: 13px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.award-text {
+  font-size: 14px;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.full-width {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.full-width img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}
+
+.full-width p {
+  text-align: center;
+}
+
+.divider {
+  width: 100%;
+  margin: 20px auto;
+  border-bottom: 1px solid #110f0f;
+}
+
+.segment {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+}
+
+.segment1 {
+  width: 100%;
+  text-align: center;
+  font-size: small;
+  padding: 20px;
+}
+
+footer {
+  background: #ec3333;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+  margin-left: 7px;
+  margin-right: 7px;
+  display: flex;
+ justify-content: space-between;
+}
+
+.footer-details span {
+  margin: 120px;
+  
+  display: inline; /* Equal spacing for each element */
+ 
+}
+
+.footer-icons img {
+  width: 30px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.logo {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo img {
+  max-width: 35%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.headline {
+  float: left;
+  width: 100%; /* Ensure the headline takes the full width */
+  text-align: left;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .trophy,
+  .details,
+  .award-text,
+  .headline {
+    flex: 0 0 100%;
+    text-align: center;
+    margin-left: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .award-text {
+    margin-left: 0;
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-details {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items on small screens */
+  }
+
+  .footer-details span {
+    margin: 10px; /* Adjust the margin as needed for small screens */
   }
 }
